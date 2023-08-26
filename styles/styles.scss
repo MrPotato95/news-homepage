@@ -44,15 +44,11 @@ header {
   width: 1110px;
   margin-bottom: 20px;
 
-  #sideNav {
-    display: none;
-  }
   #navbar {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     overflow: hidden;
 
     #logo-ctn {
@@ -87,6 +83,12 @@ header {
         }
       }
     }
+  }
+
+  #sideNav,
+  #open-btn,
+  #close-btn {
+    display: none;
   }
 }
 
@@ -250,14 +252,15 @@ main {
     #navbar {
       padding: 0;
 
+      #navbar-list {
+        display: none;
+      }
+      
       #open-btn {
         margin-top: 25px;
         width: auto;
         height: 20px;
-      }
-
-      #navbar-list {
-        display: none;
+        display: block;
       }
     }
 
@@ -307,6 +310,7 @@ main {
         }
       }
       #close-btn {
+        display: block;
         width: auto;
         height: 40px;
         padding-left: 80%;

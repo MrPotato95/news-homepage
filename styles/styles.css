@@ -56,9 +56,6 @@ header {
   width: 1110px;
   margin-bottom: 20px;
 }
-header #sideNav {
-  display: none;
-}
 header #navbar {
   width: 100%;
   display: flex;
@@ -93,6 +90,11 @@ header #navbar #navbar-list li a {
 }
 header #navbar #navbar-list li a:hover {
   color: hsl(5, 85%, 63%);
+}
+header #sideNav,
+header #open-btn,
+header #close-btn {
+  display: none;
 }
 
 main {
@@ -229,13 +231,14 @@ main .card-section .card h4:hover {
   header #navbar {
     padding: 0;
   }
+  header #navbar #navbar-list {
+    display: none;
+  }
   header #navbar #open-btn {
     margin-top: 25px;
     width: auto;
     height: 20px;
-  }
-  header #navbar #navbar-list {
-    display: none;
+    display: block;
   }
   header #overlay {
     background-color: rgba(0, 0, 0, 0.5);
@@ -281,6 +284,7 @@ main .card-section .card h4:hover {
     color: hsl(240, 100%, 5%);
   }
   header #sideNav #close-btn {
+    display: block;
     width: auto;
     height: 40px;
     padding-left: 80%;
