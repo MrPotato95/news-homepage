@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  padding: 50px 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 1110px;
+  margin-bottom: 20px;
+}
+header #sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  overflow: hidden;
+}
+header #sidebar #logo-ctn {
+  padding-top: 18px;
+  margin: 0;
+}
+header #sidebar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  padding: 25px 10px;
+}
+header #sidebar ul li {
+  list-style-type: none;
+  font-size: 1rem;
+}
+header #sidebar ul li a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+}
+header #sidebar ul li a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+main {
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+main .hero-section {
+  width: 730px;
+}
+main .hero-section picture img {
+  display: flex;
+  width: 730px;
+}
+main .hero-section #hero-desc {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  padding-top: 20px;
+}
+main .hero-section #hero-desc h1 {
+  line-height: 1;
+  font-weight: 800;
+  font-size: 3rem;
+  width: 45%;
+}
+main .hero-section #hero-desc p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 55%;
+}
+main .hero-section #hero-desc p button {
+  margin-top: 50px;
+  padding: 14px 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  outline: none;
+  color: hsl(36, 100%, 99%);
+  font-size: 14px;
+  font-weight: 700;
+}
+main .articles {
+  width: 350px;
+  padding: 15px 20px;
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: -9px;
+}
+main .articles h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2.5rem;
+}
+main .articles h3 {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+main .articles h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+main .articles p {
+  font-size: 1rem;
+  color: hsl(233, 8%, 79%);
+}
+main .articles div {
+  margin-bottom: 15px;
+}
+main .articles div:not(div:last-child) {
+  border-bottom: 1px solid grey;
+}
+main .articles div:not(div:last-child) p {
+  padding-bottom: 30px;
+}
+main .card-section {
+  background-color: burlywood;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer {
+  position: relative;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
