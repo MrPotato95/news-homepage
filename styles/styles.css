@@ -56,19 +56,24 @@ header {
   width: 1110px;
   margin-bottom: 20px;
 }
-header #sidebar {
+header #sideNav {
+  display: none;
+}
+header #navbar {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 50px;
   overflow: hidden;
 }
-header #sidebar #logo-ctn {
+header #navbar #logo-ctn {
   padding-top: 18px;
   margin: 0;
 }
-header #sidebar ul {
+header #navbar #menu-button {
+  display: none;
+}
+header #navbar #navbar-list {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -76,17 +81,17 @@ header #sidebar ul {
   gap: 40px;
   padding: 25px 10px;
 }
-header #sidebar ul li {
+header #navbar #navbar-list li {
   list-style-type: none;
   font-size: 1rem;
 }
-header #sidebar ul li a {
+header #navbar #navbar-list li a {
   padding: 0;
   margin: 0;
   text-decoration: none;
   color: hsl(236, 13%, 42%);
 }
-header #sidebar ul li a:hover {
+header #navbar #navbar-list li a:hover {
   color: hsl(5, 85%, 63%);
 }
 
@@ -120,7 +125,7 @@ main .hero-section #hero-desc {
 main .hero-section #hero-desc h1 {
   line-height: 1;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 3.5rem;
   width: 45%;
 }
 main .hero-section #hero-desc p {
@@ -141,9 +146,13 @@ main .hero-section #hero-desc p button {
   font-size: 14px;
   font-weight: 700;
 }
+main .hero-section #hero-desc p button:hover {
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
 main .articles {
   width: 350px;
-  padding: 15px 20px;
+  padding: 15px 20px 30px 20px;
   background-color: hsl(240, 100%, 5%);
   color: hsl(36, 100%, 99%);
   text-align: left;
@@ -151,7 +160,6 @@ main .articles {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  margin-left: -9px;
 }
 main .articles h2 {
   color: hsl(35, 77%, 62%);
@@ -179,14 +187,132 @@ main .articles div:not(div:last-child) p {
   padding-bottom: 30px;
 }
 main .card-section {
-  background-color: burlywood;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+main .card-section .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 125px;
+}
+main .card-section .card div {
+  margin-left: 20px;
+}
+main .card-section .card div p {
+  color: hsl(236, 13%, 42%);
+}
+main .card-section .card span {
+  color: hsl(236, 13%, 42%);
+  font-weight: 800;
+  font-size: 1.875rem;
+}
+main .card-section .card h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+main .card-section .card h4:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    margin: 0;
+    flex-direction: column;
+  }
+  header {
+    width: 100%;
+  }
+  header #navbar {
+    padding: 0;
+  }
+  header #navbar #open-btn {
+    margin-top: 25px;
+    width: auto;
+    height: 20px;
+  }
+  header #navbar #navbar-list {
+    display: none;
+  }
+  header #overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+  header #sideNav {
+    display: block;
+    height: 100%;
+    width: 75%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: hsl(36, 100%, 99%);
+    overflow-x: hidden;
+    padding-top: 25px;
+    transition: 0.5s;
+  }
+  header #sideNav ul {
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  header #sideNav ul li {
+    list-style-type: none;
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+  }
+  header #sideNav ul a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 400;
+    color: hsl(240, 100%, 5%);
+  }
+  header #sideNav #close-btn {
+    width: auto;
+    height: 40px;
+    padding-left: 80%;
+    margin-top: 7px;
+  }
+  main {
+    width: 100%;
+  }
+  main .container {
+    flex-direction: column;
+  }
+  main .hero-section {
+    width: 100%;
+    flex-direction: column;
+  }
+  main .hero-section #hero-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  main .hero-section #hero-desc h1,
+  main .hero-section #hero-desc p {
+    width: 100%;
+  }
+  main .card-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 footer {
   position: relative;
-  top: 50px;
+  top: 60px;
   bottom: 0;
   left: 0;
   right: 0;

@@ -15,11 +15,31 @@
   </head>
   <body>
     <header>
-      <nav id="sidebar">
+      <nav id="navbar">
         <div id="logo-ctn">
           <img src="./assets/images/logo.svg" alt="logo" />
         </div>
-
+        <ul id="navbar-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+        <img
+          id="open-btn"
+          onclick="openNav()"
+          src="./assets/images/icon-menu.svg"
+          alt="menu button"
+        />
+      </nav>
+      <div id="sideNav">
+        <img
+          id="close-btn"
+          onclick="closeNav()"
+          src="./assets/images/icon-menu-close.svg"
+          alt="close menu"
+        />
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
@@ -27,7 +47,8 @@
           <li><a href="#">Trending</a></li>
           <li><a href="#">Categories</a></li>
         </ul>
-      </nav>
+      </div>
+      <div id="overlay"></div>
     </header>
     <main>
       <div class="container">
@@ -81,32 +102,41 @@
       <section class="card-section">
         <div class="card">
           <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc" />
-          <span>01</span>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
+          <div>
+            <span>01</span>
+            <h4>Reviving Retro PCs</h4>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
         </div>
         <div class="card">
           <img src="./assets/images/image-top-laptops.jpg" alt="laptop" />
-          <span>02</span>
-          <h4>Top 10 Laptops of 2022</h4>
-          <p>Our best picks for various needs and budgets.</p>
+          <div>
+            <span>02</span>
+            <h4>Top 10 Laptops of 2022</h4>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
         </div>
         <div class="card">
           <img
             src="./assets/images/image-gaming-growth.jpg"
             alt="gaming controller"
           />
-          <span>03</span>
-          <h4>The Growth of Gaming</h4>
-          <p>How the pandemic has sparked fresh opportunities.</p>
+          <div>
+            <span>03</span>
+            <h4>The Growth of Gaming</h4>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
         </div>
       </section>
     </main>
     <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        rel="noopener noreferrer"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/MrPotato95">MrPotato95</a>.
+      <script src="./index.js"></script>
     </footer>
   </body>
 </html>
