@@ -1,6 +1,6 @@
 const sideNav = document.querySelector("#sideNav")
 const overlay = document.querySelector("#overlay")
-const mediaQuery = window.matchMedia("(max-width: 768px)")
+
 
 function closeNav() {
   sideNav.style.display = "none"
